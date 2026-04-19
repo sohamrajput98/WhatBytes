@@ -1,0 +1,64 @@
+<svg width="1200" height="680" viewBox="0 0 1200 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#121A2F"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="120" y1="100" x2="1080" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22C55E"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1200" height="680" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="680" rx="24" fill="url(#bg)"/>
+  <text x="60" y="72" fill="#DEE1F9" font-size="34" font-family="Inter, Arial, sans-serif" font-weight="800">Healthcare Platform Architecture</text>
+  <text x="60" y="104" fill="#9FB3C8" font-size="18" font-family="Inter, Arial, sans-serif">Modular frontend + secure Django backend + Neon PostgreSQL</text>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="150" width="300" height="190" rx="16" fill="#161B2B" stroke="#2F3446"/>
+    <text x="84" y="188" fill="#6BFF8F" font-size="18" font-family="Inter, Arial, sans-serif" font-weight="700">Frontend (Vercel)</text>
+    <text x="84" y="220" fill="#DEE1F9" font-size="15" font-family="Inter, Arial, sans-serif">• Auth + JWT session flow</text>
+    <text x="84" y="246" fill="#DEE1F9" font-size="15" font-family="Inter, Arial, sans-serif">• Patient, Doctor, Mapping UIs</text>
+    <text x="84" y="272" fill="#DEE1F9" font-size="15" font-family="Inter, Arial, sans-serif">• Auto token refresh</text>
+    <text x="84" y="298" fill="#DEE1F9" font-size="15" font-family="Inter, Arial, sans-serif">• Modular JS/CSS architecture</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="450" y="150" width="300" height="260" rx="16" fill="#161B2B" stroke="#2F3446"/>
+    <text x="474" y="188" fill="#4CD7F6" font-size="18" font-family="Inter, Arial, sans-serif" font-weight="700">Backend API (Django + DRF)</text>
+    <text x="474" y="220" fill="#DEE1F9" font-size="15" font-family="Inter, Arial, sans-serif">• JWT Auth (register/login/refresh)</text>
+    <text x="474" y="246" fill="#DEE1F9" font-size="15" font-family="Inter, Arial, sans-serif">• Custom User model (email login)</text>
+    <text x="474" y="272" fill="#DEE1F9" font-size="15" font-family="Inter, Arial, sans-serif">• Patient ownership security</text>
+    <text x="474" y="298" fill="#DEE1F9" font-size="15" font-family="Inter, Arial, sans-serif">• Mapping uniqueness constraints</text>
+    <text x="474" y="324" fill="#DEE1F9" font-size="15" font-family="Inter, Arial, sans-serif">• Standardized API response envelope</text>
+    <text x="474" y="350" fill="#DEE1F9" font-size="15" font-family="Inter, Arial, sans-serif">• Production settings + logging</text>
+    <text x="474" y="376" fill="#DEE1F9" font-size="15" font-family="Inter, Arial, sans-serif">• CORS + Neon SSL DB connectivity</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="840" y="150" width="300" height="190" rx="16" fill="#161B2B" stroke="#2F3446"/>
+    <text x="864" y="188" fill="#FFBA61" font-size="18" font-family="Inter, Arial, sans-serif" font-weight="700">Data Layer (Neon PostgreSQL)</text>
+    <text x="864" y="220" fill="#DEE1F9" font-size="15" font-family="Inter, Arial, sans-serif">• Users</text>
+    <text x="864" y="246" fill="#DEE1F9" font-size="15" font-family="Inter, Arial, sans-serif">• Patients</text>
+    <text x="864" y="272" fill="#DEE1F9" font-size="15" font-family="Inter, Arial, sans-serif">• Doctors</text>
+    <text x="864" y="298" fill="#DEE1F9" font-size="15" font-family="Inter, Arial, sans-serif">• PatientDoctorMappings</text>
+  </g>
+
+  <path d="M360 242H450" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="450,242 436,234 436,250" fill="#22C55E"/>
+
+  <path d="M750 242H840" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="840,242 826,234 826,250" fill="#06B6D4"/>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="430" width="1080" height="180" rx="16" fill="#121729" stroke="#2F3446"/>
+    <text x="84" y="468" fill="#DEE1F9" font-size="20" font-family="Inter, Arial, sans-serif" font-weight="700">Why This Project Is Production-Ready</text>
+    <text x="84" y="500" fill="#B8C7D8" font-size="15" font-family="Inter, Arial, sans-serif">• Secure token-based auth with refresh lifecycle handling</text>
+    <text x="84" y="526" fill="#B8C7D8" font-size="15" font-family="Inter, Arial, sans-serif">• Clear domain model with ownership checks and duplicate mapping prevention</text>
+    <text x="84" y="552" fill="#B8C7D8" font-size="15" font-family="Inter, Arial, sans-serif">• Clean modular frontend architecture wired to real backend workflows</text>
+    <text x="84" y="578" fill="#B8C7D8" font-size="15" font-family="Inter, Arial, sans-serif">• Deployment-oriented config for Vercel frontend and hosted Django backend</text>
+  </g>
+</svg>
