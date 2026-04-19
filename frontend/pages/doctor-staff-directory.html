@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinical Serenity - Staff Directory</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../assets/js/theme.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link href="../assets/css/base.css" rel="stylesheet" />
+  <link href="../assets/css/app.css" rel="stylesheet" />
+</head>
+<body data-page="doctors" class="font-body text-on-surface antialiased">
+  <div class="app-shell flex min-h-screen">
+    <div data-sidebar></div>
+    <main class="flex-1 p-6 md:p-8 space-y-6 pb-24 md:pb-8">
+      <section class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        <div>
+          <h1 class="text-3xl md:text-4xl font-black">Doctor Staff Directory</h1>
+          <p class="text-on-surface-variant">Manage doctor profiles and availability.</p>
+        </div>
+        <button id="openDoctorModal" class="btn-primary">Add Doctor</button>
+      </section>
+
+      <section class="panel p-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <input id="doctorSearch" class="field md:col-span-2" placeholder="Search by doctor name, specialization, or email" />
+          <select id="availabilityFilter" class="field">
+            <option value="">All Availability</option>
+            <option value="true">Available</option>
+            <option value="false">Unavailable</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4" id="doctorCards"></section>
+    </main>
+  </div>
+  <div data-mobile-nav></div>
+
+  <div id="doctorModal" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="flex items-center justify-between mb-4">
+        <h2 id="doctorModalTitle" class="text-xl font-bold">Add Doctor</h2>
+        <button id="closeDoctorModal" class="btn-secondary">Close</button>
+      </div>
+      <form id="doctorForm" class="space-y-3">
+        <input type="hidden" name="doctor_id" />
+        <label class="block"><span class="text-sm text-on-surface-variant">Name</span><input name="name" class="field mt-1" required /></label>
+        <label class="block"><span class="text-sm text-on-surface-variant">Specialization</span><input name="specialization" class="field mt-1" required /></label>
+        <div class="grid grid-cols-2 gap-3">
+          <label class="block"><span class="text-sm text-on-surface-variant">Experience (years)</span><input name="experience_years" type="number" min="0" class="field mt-1" required /></label>
+          <label class="block"><span class="text-sm text-on-surface-variant">Available</span>
+            <select name="available" class="field mt-1"><option value="true">Yes</option><option value="false">No</option></select>
+          </label>
+        </div>
+        <label class="block"><span class="text-sm text-on-surface-variant">Contact Number</span><input name="contact_number" class="field mt-1" required /></label>
+        <label class="block"><span class="text-sm text-on-surface-variant">Email</span><input name="email" type="email" class="field mt-1" required /></label>
+        <button class="btn-primary w-full" type="submit">Save Doctor</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/doctors.js"></script>
+</body>
+</html>

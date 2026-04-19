@@ -1,0 +1,125 @@
+.panel {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+}
+
+.field {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #dee1f9;
+  border-radius: 0.75rem;
+  padding: 0.7rem 0.9rem;
+}
+
+.field:focus {
+  outline: none;
+  border-color: rgba(76, 215, 246, 0.7);
+  box-shadow: 0 0 0 2px rgba(76, 215, 246, 0.25);
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #4be277, #4cd7f6);
+  color: #002109;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  padding: 0.7rem 1rem;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  color: #dee1f9;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.75rem;
+  padding: 0.7rem 1rem;
+}
+
+.btn-danger {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fecaca;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: 0.75rem;
+  padding: 0.45rem 0.7rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+}
+
+.modal-backdrop.open {
+  display: flex;
+}
+
+.modal-card {
+  width: min(560px, 92vw);
+  background: rgba(14, 19, 35, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.btn-secondary,
+.btn-danger {
+  white-space: nowrap;
+}
+
+
+:root {
+  color-scheme: dark;
+}
+
+input,
+select,
+textarea {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #dee1f9;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #869585;
+}
+
+select option {
+  background-color: #161b2b;
+  color: #dee1f9;
+}
+
+.field,
+.field:focus,
+.field:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #dee1f9;
+}
+
+.field:-webkit-autofill,
+.field:-webkit-autofill:hover,
+.field:-webkit-autofill:focus {
+  -webkit-text-fill-color: #dee1f9;
+  -webkit-box-shadow: 0 0 0 1000px rgba(14, 19, 35, 1) inset;
+  transition: background-color 9999s ease-in-out 0s;
+}

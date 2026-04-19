@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinical Serenity - Auth</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../assets/js/theme.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link href="../assets/css/base.css" rel="stylesheet" />
+  <link href="../assets/css/app.css" rel="stylesheet" />
+</head>
+<body class="font-body text-on-surface antialiased min-h-screen flex items-center justify-center p-4">
+  <div class="panel w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 overflow-hidden">
+    <section class="p-8 md:p-10 bg-surface-container-lowest">
+      <h1 class="text-4xl font-black mb-3">Sanctuary Health</h1>
+      <p class="text-on-surface-variant mb-8">Login or register to access the healthcare backend dashboard.</p>
+      <div class="space-y-4 text-sm text-on-surface-variant">
+        <p>This frontend auto-selects API base URL by environment:</p>
+        <p>- Local: <code>http://127.0.0.1:8000/api</code></p>
+        <p>- Production: value from <code>assets/js/config.js</code></p>
+        <p>For Vercel deployment, set your backend domain in that config file.</p>
+      </div>
+    </section>
+    <section class="p-8 md:p-10">
+      <div class="flex gap-2 mb-6">
+        <button id="showLogin" class="btn-primary flex-1">Login</button>
+        <button id="showRegister" class="btn-secondary flex-1">Register</button>
+      </div>
+
+      <form id="loginForm" class="space-y-4">
+        <label class="block">
+          <span class="text-sm text-on-surface-variant">Email</span>
+          <input name="email" type="email" class="field mt-2" required />
+        </label>
+        <label class="block">
+          <span class="text-sm text-on-surface-variant">Password</span>
+          <input name="password" type="password" class="field mt-2" required />
+        </label>
+        <button class="btn-primary w-full" type="submit">Login</button>
+      </form>
+
+      <form id="registerForm" class="space-y-4 hidden">
+        <label class="block">
+          <span class="text-sm text-on-surface-variant">Name</span>
+          <input name="name" class="field mt-2" required />
+        </label>
+        <label class="block">
+          <span class="text-sm text-on-surface-variant">Email</span>
+          <input name="email" type="email" class="field mt-2" required />
+        </label>
+        <label class="block">
+          <span class="text-sm text-on-surface-variant">Password</span>
+          <input name="password" type="password" class="field mt-2" minlength="8" required />
+        </label>
+        <button class="btn-primary w-full" type="submit">Create Account</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/auth.js"></script>
+</body>
+</html>

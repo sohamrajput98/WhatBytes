@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinical Serenity - Patient Doctor Mappings</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../assets/js/theme.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link href="../assets/css/base.css" rel="stylesheet" />
+  <link href="../assets/css/app.css" rel="stylesheet" />
+</head>
+<body data-page="mappings" class="font-body text-on-surface antialiased">
+  <div class="app-shell flex min-h-screen">
+    <div data-sidebar></div>
+    <main class="flex-1 p-6 md:p-8 space-y-6 pb-24 md:pb-8">
+      <section>
+        <h1 class="text-3xl md:text-4xl font-black">Patient-Doctor Mapping</h1>
+        <p class="text-on-surface-variant">Assign doctors to patients and manage existing mappings.</p>
+      </section>
+
+      <section class="panel p-4">
+        <form id="mappingForm" class="grid grid-cols-1 md:grid-cols-4 gap-3 items-end">
+          <label class="block md:col-span-1">
+            <span class="text-sm text-on-surface-variant">Patient</span>
+            <select id="patientSelect" class="field mt-1" required></select>
+          </label>
+          <label class="block md:col-span-1">
+            <span class="text-sm text-on-surface-variant">Doctor</span>
+            <select id="doctorSelect" class="field mt-1" required></select>
+          </label>
+          <label class="block md:col-span-1">
+            <span class="text-sm text-on-surface-variant">Notes</span>
+            <input id="mappingNotes" class="field mt-1" placeholder="Optional notes" />
+          </label>
+          <button class="btn-primary" type="submit">Assign</button>
+        </form>
+      </section>
+
+      <section class="panel p-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div>
+            <h2 class="font-bold mb-2">Mappings (All)</h2>
+            <p class="text-xs text-on-surface-variant">Shows all mappings for your patients with nested doctor info.</p>
+          </div>
+          <div>
+            <label class="block">
+              <span class="text-sm text-on-surface-variant">View doctors by patient</span>
+              <select id="patientFilterSelect" class="field mt-1"></select>
+            </label>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>ID</th><th>Patient</th><th>Doctor</th><th>Notes</th><th>Assigned At</th><th>Actions</th></tr></thead>
+            <tbody id="mappingTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel p-4">
+        <h3 class="text-lg font-bold mb-2">Doctors Assigned to Selected Patient</h3>
+        <ul id="patientDoctorList" class="space-y-2"></ul>
+      </section>
+    </main>
+  </div>
+  <div data-mobile-nav></div>
+
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/mappings.js"></script>
+</body>
+</html>

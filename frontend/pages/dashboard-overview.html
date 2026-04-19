@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinical Serenity - Dashboard</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../assets/js/theme.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link href="../assets/css/base.css" rel="stylesheet" />
+  <link href="../assets/css/app.css" rel="stylesheet" />
+</head>
+<body data-page="overview" class="font-body text-on-surface antialiased">
+  <div class="app-shell flex min-h-screen">
+    <div data-sidebar></div>
+    <main class="flex-1 p-6 md:p-8 space-y-6 pb-24 md:pb-8">
+      <section class="flex items-center justify-between gap-4">
+        <div>
+          <h1 class="text-3xl md:text-4xl font-black">Dashboard Overview</h1>
+          <p id="welcomeText" class="text-on-surface-variant mt-1">Loading user profile...</p>
+        </div>
+        <div class="flex gap-2">
+          <a href="./patient-management.html" class="btn-primary">Manage Patients</a>
+          <a href="#" data-action="logout" class="btn-secondary">Logout</a>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="panel p-4"><p class="text-sm text-on-surface-variant">Total Patients</p><p id="statPatients" class="text-3xl font-black mt-2">0</p></div>
+        <div class="panel p-4"><p class="text-sm text-on-surface-variant">Total Doctors</p><p id="statDoctors" class="text-3xl font-black mt-2">0</p></div>
+        <div class="panel p-4"><p class="text-sm text-on-surface-variant">Total Mappings</p><p id="statMappings" class="text-3xl font-black mt-2">0</p></div>
+        <div class="panel p-4"><p class="text-sm text-on-surface-variant">Unmapped Patients</p><p id="statUnmapped" class="text-3xl font-black mt-2">0</p></div>
+      </section>
+
+      <section class="panel p-4">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="text-xl font-bold">Recent Patients</h2>
+          <a href="./patient-management.html" class="text-sm text-secondary">Open Full Registry</a>
+        </div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr><th>Name</th><th>Age</th><th>Gender</th><th>Contact</th><th>Updated</th></tr>
+            </thead>
+            <tbody id="recentPatientsBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div data-mobile-nav></div>
+
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>
