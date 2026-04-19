@@ -123,3 +123,38 @@ select option {
   -webkit-box-shadow: 0 0 0 1000px rgba(14, 19, 35, 1) inset;
   transition: background-color 9999s ease-in-out 0s;
 }
+
+/* Auth/input hardening: keep dark background + white text in all states */
+input.field,
+input.field:hover,
+input.field:focus,
+input.field:active,
+textarea.field,
+textarea.field:hover,
+textarea.field:focus,
+textarea.field:active,
+select.field,
+select.field:hover,
+select.field:focus,
+select.field:active {
+  background-color: rgba(8, 13, 29, 0.92) !important;
+  color: #dee1f9 !important;
+  caret-color: #dee1f9 !important;
+}
+
+input.field::placeholder,
+textarea.field::placeholder {
+  color: #869585 !important;
+}
+
+input.field:-webkit-autofill,
+input.field:-webkit-autofill:hover,
+input.field:-webkit-autofill:focus,
+textarea.field:-webkit-autofill,
+textarea.field:-webkit-autofill:hover,
+textarea.field:-webkit-autofill:focus {
+  -webkit-text-fill-color: #dee1f9 !important;
+  -webkit-box-shadow: 0 0 0 1000px rgba(8, 13, 29, 0.92) inset !important;
+  box-shadow: 0 0 0 1000px rgba(8, 13, 29, 0.92) inset !important;
+  transition: background-color 9999s ease-in-out 0s;
+}

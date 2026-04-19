@@ -11,19 +11,35 @@
   <link href="../assets/css/base.css" rel="stylesheet" />
   <link href="../assets/css/app.css" rel="stylesheet" />
 </head>
-<body class="font-body text-on-surface antialiased min-h-screen flex items-center justify-center p-4">
-  <div class="panel w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 overflow-hidden">
-    <section class="p-8 md:p-10 bg-surface-container-lowest">
-      <h1 class="text-4xl font-black mb-3">Sanctuary Health</h1>
-      <p class="text-on-surface-variant mb-8">Login or register to access the healthcare backend dashboard.</p>
-      <div class="space-y-4 text-sm text-on-surface-variant">
-        <p>This frontend auto-selects API base URL by environment:</p>
-        <p>- Local: <code>http://127.0.0.1:8000/api</code></p>
-        <p>- Production: value from <code>assets/js/config.js</code></p>
-        <p>For Vercel deployment, set your backend domain in that config file.</p>
+<body class="font-body text-on-surface antialiased min-h-screen flex items-center justify-center p-4 md:p-6">
+  <div class="panel w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 overflow-hidden">
+    <section class="relative p-8 md:p-12 bg-surface-container-lowest flex flex-col justify-between min-h-[360px]">
+      <div>
+        <div class="inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white/5 border border-white/10 text-xs uppercase tracking-widest text-on-surface-variant">
+          <span class="material-symbols-outlined text-sm">verified_user</span>
+          Secure Access Portal
+        </div>
+        <h1 class="text-4xl md:text-5xl font-black mt-6 leading-tight">Sanctuary Health</h1>
+        <p class="text-on-surface-variant mt-4 max-w-md">
+          Clinical operations, patient records, and doctor mappings managed through one secure dashboard.
+        </p>
       </div>
+
+      <div class="grid grid-cols-2 gap-3 mt-8">
+        <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+          <p class="text-xs text-on-surface-variant uppercase tracking-wider">Security</p>
+          <p class="text-lg font-bold mt-1">JWT Protected</p>
+        </div>
+        <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+          <p class="text-xs text-on-surface-variant uppercase tracking-wider">Records</p>
+          <p class="text-lg font-bold mt-1">Role Scoped</p>
+        </div>
+      </div>
+
+      <div class="absolute -right-20 -bottom-20 w-64 h-64 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
     </section>
-    <section class="p-8 md:p-10">
+
+    <section class="p-8 md:p-12 bg-surface-container-low">
       <div class="flex gap-2 mb-6">
         <button id="showLogin" class="btn-primary flex-1">Login</button>
         <button id="showRegister" class="btn-secondary flex-1">Register</button>
