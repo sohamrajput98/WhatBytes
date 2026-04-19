@@ -8,7 +8,6 @@
 ![Vercel](https://img.shields.io/badge/Frontend-Vercel-black?logo=vercel)
 A production-quality healthcare system built with a secure Django backend and a fully wired modular frontend.
 
-![Architecture](./docs/architecture.svg)
 
 ## Beyond Requirements: Why I Built More
 
